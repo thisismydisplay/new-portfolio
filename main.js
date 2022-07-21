@@ -4,7 +4,7 @@ import { setupCounter } from './counter.js'
 import * as THREE from 'three';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
 
-const basePath = import.meta.env.PROD ? '/new-portfolio' : ''
+const basePath = import.meta.env.NODE_ENV === 'production' ? 'new-portfolio/' : ''
 
 const scene = new THREE.Scene();
 const pageContainer = document.getElementById('page-container')
@@ -29,7 +29,7 @@ renderer.render(scene, camera);
 
 //Torus2
 // const torus = new THREE.TextureLoader().load('triangles.png');
-const torusTexture = new THREE.TextureLoader().load(`${basePath}/triangles.jpg`);
+const torusTexture = new THREE.TextureLoader().load(`${basePath}triangles.jpg`);
 // const normalTexture = new THREE.TextureLoader().load('normal.jpg');
 
 const torus = new THREE.Mesh(
@@ -83,12 +83,12 @@ Array(200).fill().forEach(addStar);
 
 // Background
 
-const spaceTexture = new THREE.TextureLoader().load(`${basePath}/space.jpg`);
+const spaceTexture = new THREE.TextureLoader().load(`${basePath}space.jpg`);
 scene.background = spaceTexture;
 
 // Avatar
 
-const constructionTexture = new THREE.TextureLoader().load(`${basePath}/construction.png`);
+const constructionTexture = new THREE.TextureLoader().load(`${basePath}construction.png`);
 
 const construction = new THREE.Mesh(new THREE.BoxGeometry(3, 3, 3), new THREE.MeshBasicMaterial({ map: constructionTexture }));
 
@@ -96,8 +96,8 @@ scene.add(construction);
 
 // Moon
 
-const moonTexture = new THREE.TextureLoader().load(`${basePath}/moon.jpg`);
-const normalTexture = new THREE.TextureLoader().load(`${basePath}/normal.jpg`);
+const moonTexture = new THREE.TextureLoader().load(`${basePath}moon.jpg`);
+const normalTexture = new THREE.TextureLoader().load(`${basePath}normal.jpg`);
 
 const moon = new THREE.Mesh(
   new THREE.SphereGeometry(3, 32, 32),
