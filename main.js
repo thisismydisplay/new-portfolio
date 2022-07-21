@@ -3,8 +3,12 @@ import javascriptLogo from './javascript.svg'
 import { setupCounter } from './counter.js'
 import * as THREE from 'three';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
-
-const basePath = import.meta.env.MODE === 'production' ? '/new-portfolio/' : '/'
+import constructionPath from './construction.png'
+import moonPath from './moon.jpg'
+import normalPath from './normal.jpg'
+import spacePath from './space.jpg'
+import trianglesPath from './triangles.jpg'
+// const basePath = import.meta.env.MODE === 'production' ? '/new-portfolio/' : '/'
 
 const scene = new THREE.Scene();
 const pageContainer = document.getElementById('page-container')
@@ -29,7 +33,7 @@ renderer.render(scene, camera);
 
 //Torus2
 // const torus = new THREE.TextureLoader().load('triangles.png');
-const torusTexture = new THREE.TextureLoader().load(`${basePath}triangles.jpg`);
+const torusTexture = new THREE.TextureLoader().load(trianglesPath);
 // const normalTexture = new THREE.TextureLoader().load('normal.jpg');
 
 const torus = new THREE.Mesh(
@@ -83,12 +87,12 @@ Array(200).fill().forEach(addStar);
 
 // Background
 
-const spaceTexture = new THREE.TextureLoader().load(`${basePath}space.jpg`);
+const spaceTexture = new THREE.TextureLoader().load(spacePath);
 scene.background = spaceTexture;
 
 // Avatar
 
-const constructionTexture = new THREE.TextureLoader().load(`${basePath}construction.png`);
+const constructionTexture = new THREE.TextureLoader().load(constructionPath);
 
 const construction = new THREE.Mesh(new THREE.BoxGeometry(3, 3, 3), new THREE.MeshBasicMaterial({ map: constructionTexture }));
 
@@ -96,8 +100,8 @@ scene.add(construction);
 
 // Moon
 
-const moonTexture = new THREE.TextureLoader().load(`${basePath}moon.jpg`);
-const normalTexture = new THREE.TextureLoader().load(`${basePath}normal.jpg`);
+const moonTexture = new THREE.TextureLoader().load(moonPath);
+const normalTexture = new THREE.TextureLoader().load(normalPath);
 
 const moon = new THREE.Mesh(
   new THREE.SphereGeometry(3, 32, 32),
