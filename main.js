@@ -4,7 +4,7 @@ import { setupCounter } from './counter.js'
 import * as THREE from 'three';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
 
-const basePath = import.meta.env.MODE === 'production' ? 'new-portfolio/' : ''
+const basePath = import.meta.env.MODE === 'production' ? '/new-portfolio/' : '/'
 
 const scene = new THREE.Scene();
 const pageContainer = document.getElementById('page-container')
