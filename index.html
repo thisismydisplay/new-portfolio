@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>Mark Osman</title>
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.eb03ea2a.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="data:image/png;base64,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">
+    <link rel="icon" type="image/png" sizes="16x16" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAA1dJREFUOE89k11oW2Ucxn/vOScfJzlJm9atSa026Wa6ttPWWrsNUeZWkIIg3ogDxRtBhmXixYRBtVPRUafihRcq6E2HiCC1lsHqurXYObfOj7La1bTVflgGrrJ0SZOdnI+8kiPsD8/Nn4eH53n+7yvee39AlkolXMdG0zQURaUyZSlZW17DcWwS9fVovgBSgpQCIQTCY4E4+cFxWSpZuI5FIBhE01SP8MulacK2SXdbmptFi7mNLSLRKhAKmvo/546Abdu4roMe0tE0wcY//7L222Uea23mkY52Um27+Gz4DBcz11FV9Q48JxUHtu1QLjsY4RCKqjD90xXEzev0dHbwUDpNbUOC+fV1Br88gz8Q8GJW4LmtCDiOgyyXMYwQiiKYm7nG3wvzRPUQr794iLnFP0mkknw8ch6haICspPcgBk++Ictu2VtGImG2sptMjIyg6wH8isKJvpfIbuVIJOOc/3WRc7NLlRpQhB+zmEOcGOyXXr1ANGpglyxOD52iKqwRUgN8ePQI1U13Y1sFTn0zzvCFaVRNAaERDAYR77x7THplCOEJ/DB1mcmzk3Q21VIfjvHK072kH3+Q0+cuMvTdOCXT9BLcKpg0NqcRb759VGpq5f4KuXyeTz4dwjIt2hqq6W3fRd/zz5CXRV546wsMv4t0TWzbYut2mdauLsTA8Vdl5QGpmo9rcxmGvx1DSknjXQZPdN5Hz74OpjMrfDUxixEJURcsYpolLFehubML0T9wRGqqzzvf2NgUc79nvDiG4rLdb7OtJkQs0URMsZhad7gnJnBKeVypktp9P+JY/8vSthwuTP1MZmEZ13XRdZ2gU6SxukxDUwoze4P21hY+Gr1KPB4nFgkQCUriDQ2Iw33PyfHvfySfK+KWXerq4qysrFATUNiZjHDo8GvMTowStB0m/yoSq6oibBjoRhghtxAHevbJqzMZFE31yrs3mWR1dRWftOk9uIf9Tz6FuZllenSYdOdeNgout8sau9MtTF6aQnTveUD+kVmh8jcq2Wtrt5HNZtGkRa0uOLi3m53bq5iZXySZTPFs7wE+v7LMjY0cC0tLiOaWlLy1WfCa9ft8JOJxcvkChVyWGh2iepCHW3bQu/9RRMAgHY/y9fwmmflF0qkd/Ad6aF9EbDeZoAAAAABJRU5ErkJggg==">
+    <link rel="manifest" href="data:application/manifest+json;base64,eyJuYW1lIjoiIiwic2hvcnRfbmFtZSI6IiIsImljb25zIjpbeyJzcmMiOiIvYW5kcm9pZC1jaHJvbWUtMTkyeDE5Mi5wbmciLCJzaXplcyI6IjE5MngxOTIiLCJ0eXBlIjoiaW1hZ2UvcG5nIn0seyJzcmMiOiIvYW5kcm9pZC1jaHJvbWUtNTEyeDUxMi5wbmciLCJzaXplcyI6IjUxMng1MTIiLCJ0eXBlIjoiaW1hZ2UvcG5nIn1dLCJ0aGVtZV9jb2xvciI6IiNmZmZmZmYiLCJiYWNrZ3JvdW5kX2NvbG9yIjoiI2ZmZmZmZiIsImRpc3BsYXkiOiJzdGFuZGFsb25lIn0=">
+    <!-- <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico" /> -->
+    <!-- Font Awesome icons (free version)-->
+    <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
+
+    <!-- devicon.dev icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
+
+    <!-- Google fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700" rel="stylesheet"
+        type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet" type="text/css" />
+    <!-- Core theme CSS (includes Bootstrap)-->
+    
+  <script type="module" crossorigin src="/assets/index.9bb8ba41.js"></script>
+  <link rel="stylesheet" href="/assets/index.73d3ec98.css">
+</head>
+
+<body id="page-top">
+    <!-- Navigation-->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
+        <a class="navbar-brand js-scroll-trigger" href="#page-top">
+            <span class="d-block d-lg-none">Mark Osman</span>
+            <span class="d-none d-lg-block"><img class="img-fluid img-profile rounded-circle mx-auto mb-2"
+                    src="/assets/profile.b5a0344a.jpg" alt="..." /></span>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive"
+            aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span
+                class="navbar-toggler-icon"></span></button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav">
+                <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#about">~</a></li>
+                <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#skills">./skills</a></li>
+                <!-- <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#education">./education</a></li>
+                <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#experience">./experience</a></li> -->
+                <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#projects">./projects</a></li>
+                <!-- <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#publications">./publications</a></li> -->
+            </ul>
+        </div>
+    </nav>
+    <!-- Page Content-->
+    <div class="container-fluid p-0" id="page-container">
+    <canvas id="bg"></canvas>
+
+        <!-- About-->
+        <section class="resume-section" id="about">
+            <div class="resume-section-content">
+                <h1 class="mb-0">
+                    Mark
+                    <span class="text-primary">Osman</span>
+                </h1>
+                <div class="subheading mb-5">
+                    Software Engineer · Kansas City, MO · (913) 302-8379 |
+                    <a href="mailto:name@email.com">markrockwellosman@gmail.com</a> ·
+                    <a href="/assets/Osman_Mark_Resume.pdf">Resume</a>
+                </div>
+                <p class="lead mb-5">I'm a creative problem-solver and passionate software engineer who loves to code
+                    and collaborate with others. I love learning new things and I have experience building dynamic web
+                    applications in Javascript, Python, and HTML/CSS with various frameworks. When I'm
+                    not coding, you can find me playing music, scouting out new hiking locations, or enjoying quality
+                    time with friends and family.</p>
+                <div class="social-icons">
+                    <a class="social-icon" href="https://www.linkedin.com/in/markrockwellosman/"><i
+                            class="fab fa-linkedin-in"></i></a>
+                    <a class="social-icon" href="https://github.com/thisismydisplay"><i class="fab fa-github"></i></a>
+                    <!-- <a class="social-icon" href="#!"><i class="fab fa-twitter"></i></a>
+                            <a class="social-icon" href="#!"><i class="fab fa-facebook-f"></i></a> -->
+                </div>
+            </div>
+        </section>
+        <hr class="m-0" />
+        <!-- Skills-->
+        <section class="resume-section" id="skills">
+            <div class="resume-section-content">
+                <h2 class="mb-5">Skills</h2>
+                <div class="subheading mb-3">Programming Languages & Tools</div>
+                <ul class="list-inline dev-icons">
+                    <li class="list-inline-item">
+                        <i class="devicon-html5-plain-wordmark colored"></i>
+                    </li>
+                    <li class="list-inline-item">
+                        <i class="devicon-css3-plain-wordmark colored"></i>
+                    </li>
+                    <li class="list-inline-item">
+                        <i class="devicon-javascript-plain colored"></i>
+                    </li>
+                    <li class="list-inline-item">
+
+                        <i class="devicon-python-plain-wordmark colored"></i>
+
+                    </li>
+                    <li class="list-inline-item">
+
+
+                        <i class="devicon-flask-original-wordmark colored"></i>
+
+                    </li>
+                    <li class="list-inline-item">
+
+
+                        <i class="devicon-react-original-wordmark colored"></i>
+
+                    </li>
+                    <li class="list-inline-item">
+
+                        <i class="devicon-redux-original colored"></i>
+                    </li>
+                    <li class="list-inline-item">
+
+
+                        <i class="devicon-nodejs-plain-wordmark colored"></i>
+
+
+                    </li>
+                    <li class="list-inline-item">
+
+
+                        <i class="devicon-express-original-wordmark colored"></i>
+
+
+                    </li>
+                    <li class="list-inline-item">
+
+
+                        <i class="devicon-linux-plain colored"></i>
+
+                    </li>
+                    <li class="list-inline-item">
+
+
+
+                        <i class="devicon-docker-plain-wordmark colored"></i>
+
+                    </li>
+                    <li class="list-inline-item">
+
+
+
+
+                        <i class="devicon-amazonwebservices-plain-wordmark colored"></i>
+
+                    </li>
+                    <li class="list-inline-item">
+
+
+
+                        <i class="devicon-postgresql-plain-wordmark colored"></i>
+
+                    </li>
+                    <li class="list-inline-item">
+
+
+
+                        <i class="devicon-mysql-plain-wordmark colored"></i>
+
+                    </li>
+                    <li class="list-inline-item">
+
+
+
+
+                        <i class="devicon-sequelize-plain-wordmark colored"></i>
+
+                    </li>
+                    <li class="list-inline-item">
+
+
+
+                        <i class="devicon-sqlalchemy-original-wordmark colored"></i>
+
+                    </li>
+                    <li class="list-inline-item">
+
+
+
+
+                        <i class="devicon-r-original colored"></i>
+
+                    </li>
+                    <li class="list-inline-item">
+
+
+
+
+
+                        <i class="devicon-spss-plain colored"></i>
+
+                    </li>
+                    <li class="list-inline-item">
+
+
+
+
+                        <i class="devicon-pandas-original-wordmark colored"></i>
+
+                    </li>
+                    <li class="list-inline-item">
+
+
+
+
+                        <i class="devicon-numpy-original-wordmark colored"></i>
+
+                    </li>
+                    <li class="list-inline-item">
+
+
+
+
+                        <i class="devicon-git-plain-wordmark colored"></i>
+
+                    </li>
+                    <li class="list-inline-item">
+
+
+
+
+
+                        <i class="devicon-vscode-plain-wordmark colored"></i>
+
+                    </li>
+                    <li class="list-inline-item">
+
+
+
+
+                        <i class="devicon-npm-original-wordmark colored"></i>
+
+                    </li>
+                    <li class="list-inline-item">
+
+
+
+
+
+                        <i class="devicon-heroku-original-wordmark colored"></i>
+
+                    </li>
+                    <li class="list-inline-item">
+
+
+
+
+
+                        <i class="devicon-bootstrap-plain-wordmark colored"></i>
+
+                    </li>
+                    <li class="list-inline-item">
+
+
+
+
+
+
+                        <i class="devicon-mocha-plain colored"></i>
+
+                    </li>
+                    <li class="list-inline-item">
+
+
+
+
+
+
+
+                        <i class="devicon-jest-plain colored"></i>
+
+                    </li>
+                    <li class="list-inline-item">
+
+
+
+
+
+
+
+
+                        <i class="devicon-pytest-plain-wordmark colored"></i>
+
+                    </li>
+                    <li class="list-inline-item">
+
+
+                        <i class="devicon-linux-plain colored"></i>
+
+                    </li>
+                    <li class="list-inline-item">
+
+
+
+                        <i class="devicon-ubuntu-plain-wordmark colored"></i>
+
+                    </li>
+                    <li class="list-inline-item">
+
+
+
+                        <i class="devicon-bash-plain colored"></i>
+
+                    </li>
+                    <li class="list-inline-item">
+
+
+
+
+
+                        <i class="devicon-apple-original colored"></i>
+
+                    </li>
+                    <li class="list-inline-item">
+
+
+
+                        <i class="devicon-windows8-original colored"></i>
+
+                    </li>
+
+                </ul>
+                <div class="subheading mb-3">Workflow</div>
+                <ul class="fa-ul mb-0">
+                    <li>
+                        <span class="fa-li"><i class="fas fa-check"></i></span>
+                        Agile Development & Scrum
+                    </li>
+                    <li>
+                        <span class="fa-li"><i class="fas fa-check"></i></span>
+                        Cross Functional Teams
+                    </li>
+                    <li>
+                        <span class="fa-li"><i class="fas fa-check"></i></span>
+                        Responsive Web Design
+                    </li>
+                    <li>
+                        <span class="fa-li"><i class="fas fa-check"></i></span>
+                        Test Driven Development
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <!-- Education
+        <section class="resume-section" id="education">
+            <div class="resume-section-content">
+                <h2 class="mb-5">Education</h2>
+                <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                    <div class="flex-grow-1">
+                        <h3 class="mb-0">App Academy</h3>
+                        <div class="subheading mb-3">1000-hour full stack software development program</div>
+                        <div>Computer Science - Web Development Track</div>
+                        <p>GPA: 3.23</p>
+                    </div>
+                    <div class="flex-shrink-0"><span class="text-primary">January 2022 - July 2022</span></div>
+                </div>
+                <div class="d-flex flex-column flex-md-row justify-content-between">
+                    <div class="flex-grow-1">
+                        <h3 class="mb-0">Texas Tech University</h3>
+                        <div class="subheading mb-3">Master of Business Administration - Information Technology</div>
+                        <p>GPA: 4.0</p>
+                    </div>
+                    <div class="flex-shrink-0"><span class="text-primary">August 2020 - Dec 2021</span></div>
+                </div>
+                <div class="d-flex flex-column flex-md-row justify-content-between">
+                    <div class="flex-grow-1">
+                        <h3 class="mb-0">University of Kansas</h3>
+                        <div class="subheading mb-3">Bachelor of Science, Cognitive Psychology</div>
+                        <p>GPA: 3.92</p>
+                    </div>
+                    <div class="flex-shrink-0"><span class="text-primary">August 2008 - Dec 2011</span></div>
+                </div>
+            </div>
+        </section>
+        <hr class="m-0" />
+        <hr class="m-0" />
+        Experience
+        <section class="resume-section" id="experience">
+            <div class="resume-section-content">
+                <h2 class="mb-5">Previous Experience</h2>
+                <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                    <div class="flex-grow-1">
+                        <h3 class="mb-0">IT Director</h3>
+                        <div class="subheading mb-3">St. Edmund's Retreat</div>
+                        <p> Drove decisions for the direction of operations. Managed multi-stage implementation of
+                            technological changes and system enhancements to business processes, policies, and
+                            infrastructure to create efficiencies and optimize organizational value chain. Led migration
+                            to cloud-based SaaS platform
+                            for program creation, online booking management, and end to end payments. Designed and
+                            analyzed custom reports and created cross-platform integrations for data migration of over
+                            30,000 constituents.
+                        </p>
+                    </div>
+                    <div class="flex-shrink-0"><span class="text-primary">Nov 2019 - July 2021</span></div>
+                </div>
+
+
+            </div>
+        </section>
+        <hr class="m-0" />
+        Interests-->
+        <section class="resume-section" id="projects">
+            <div class="resume-section-content">
+                <h2 class="mb-5">Projects</h2>
+                <h3 class="mb-0">rFlix</h3>
+                <hr />
+
+                <a href='https://rflix.herokuapp.com' target="_blank" rel="noreferrer noopener"><img
+                        class='img-fluid pb-3' src="/assets/rflix.5300ba3b.png" alt=""></a>
+                <div class="d-flex flex-column flex-md-row justify-content-between">
+                    <div class="flex-grow-1">
+                        <div class="subheading mb-3">rFlix is a video streaming platform based on Netflix UI/UX with
+                            Youtube-inspired comment functionality.
+                        </div>
+                        <!-- <div>Computer Science - Web Development Track</div> -->
+                        <!-- <p>GPA: 3.23</p> -->
+                    </div>
+                    <div class="flex-shrink-0"><span class="text-primary"><a href="https://rflix.herokuapp.com" target="_blank" rel="noreferrer noopener">live
+                                site</a> | <a href="https://github.com/thisismydisplay/rflix" target="_blank" rel="noreferrer noopener">github</a></span></div>
+                </div>
+                <hr />
+                <h3 class="mb-0">Lofidelity</h3>
+                <hr />
+                <a href='https://lofidelity.herokuapp.com' target="_blank" rel="noreferrer noopener"><img
+                        class='img-fluid pb-3' src="/assets/lofidelity.e33ad1e4.png" alt=""></a>
+                <div class="d-flex flex-column flex-md-row justify-content-between">
+                    <div class="flex-grow-1">
+                        <div class="subheading mb-3">An online music community where passionate lofi fans discover,
+                            connect with, and directly support the artists they love.</div>
+                    </div>
+                    <div class="flex-shrink-0"><span class="text-primary"><a
+                                href="https://lofidelity.herokuapp.com" target="_blank" rel="noreferrer noopener">live site</a> | <a
+                                href="https://github.com/starsabhi/lofidelity" target="_blank" rel="noreferrer noopener">github</a></span></div>
+                </div>
+                <hr />
+                <h3 class="mb-0">BetterNote</h3>
+                <hr />
+
+                <a href='https://better-note-app.herokuapp.com' target="_blank" rel="noreferrer noopener"><img
+                        class='img-fluid pb-3' src="/assets/better-note.8e369d4d.png" alt=""></a>
+                <div class="d-flex flex-column flex-md-row justify-content-between">
+                    <div class="flex-grow-1">
+                        <div class="subheading mb-3">A single page full-stack application for note-taking and
+                            organization.</div>
+                    </div>
+                    <div class="flex-shrink-0"><span class="text-primary"><a
+                                href="https://better-note-app.herokuapp.com" target="_blank" rel="noreferrer noopener">live site</a> | <a
+                                href="https://github.com/thisismydisplay/better-note" target="_blank" rel="noreferrer noopener">github</a></span></div>
+                </div>
+
+            </div>
+        </section>
+        <hr class="m-0" />
+        <!--
+        <section class="resume-section" id="publications">
+            <div class="resume-section-content">
+                <h2 class="mb-5">Publications</h2>
+                <ul class="fa-ul mb-0">
+                    <li>
+                        <span class="fa-li"><i class="fas fa-book text-warning"></i></span>
+                        <a href="https://www.sciencedirect.com/science/article/abs/pii/S0022103112000844"> Subjectivity
+                            uncertainty theory of objectification: Compensating for uncertainty about how to positively
+                            relate to others by downplaying their subjective attributes</a>
+                    </li>
+                    <li>
+                        <span class="fa-li"><i class="fas fa-book text-warning"></i></span>
+                        <a href="https://link.springer.com/article/10.1007/s12052-010-0294-1"> What's the matter with
+                            Kansas?: The development and confirmation of the Evolutionary Attitudes and Literacy Survey
+                            (EALS)</a>
+
+                    </li>
+
+                </ul>
+            </div>
+        </section>
+    -->
+    </div>
+    <!-- Bootstrap core JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Core theme JS-->
+    
+</body>
+
+</html>
