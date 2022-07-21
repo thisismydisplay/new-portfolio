@@ -4,6 +4,8 @@ import { setupCounter } from './counter.js'
 import * as THREE from 'three';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
 
+const basePath = import.meta.env.PROD ? '/new-portfolio' : ''
+
 const scene = new THREE.Scene();
 const pageContainer = document.getElementById('page-container')
 const navbar = document.getElementById('sideNav')
@@ -27,7 +29,7 @@ renderer.render(scene, camera);
 
 //Torus2
 // const torus = new THREE.TextureLoader().load('triangles.png');
-const torusTexture = new THREE.TextureLoader().load('triangles.jpg');
+const torusTexture = new THREE.TextureLoader().load(`${basePath}/triangles.jpg`);
 // const normalTexture = new THREE.TextureLoader().load('normal.jpg');
 
 const torus = new THREE.Mesh(
@@ -81,21 +83,21 @@ Array(200).fill().forEach(addStar);
 
 // Background
 
-const spaceTexture = new THREE.TextureLoader().load('space.jpg');
+const spaceTexture = new THREE.TextureLoader().load(`${basePath}/space.jpg`);
 scene.background = spaceTexture;
 
 // Avatar
 
-const markTexture = new THREE.TextureLoader().load('construction.png');
+const constructionTexture = new THREE.TextureLoader().load(`${basePath}/construction.png`);
 
-const jeff = new THREE.Mesh(new THREE.BoxGeometry(3, 3, 3), new THREE.MeshBasicMaterial({ map: markTexture }));
+const construction = new THREE.Mesh(new THREE.BoxGeometry(3, 3, 3), new THREE.MeshBasicMaterial({ map: constructionTexture }));
 
-scene.add(jeff);
+scene.add(construction);
 
 // Moon
 
-const moonTexture = new THREE.TextureLoader().load('moon.jpg');
-const normalTexture = new THREE.TextureLoader().load('normal.jpg');
+const moonTexture = new THREE.TextureLoader().load(`${basePath}/moon.jpg`);
+const normalTexture = new THREE.TextureLoader().load(`${basePath}/normal.jpg`);
 
 const moon = new THREE.Mesh(
   new THREE.SphereGeometry(3, 32, 32),
@@ -110,8 +112,8 @@ scene.add(moon);
 moon.position.z = 30;
 moon.position.setX(-10);
 
-jeff.position.z = -5;
-jeff.position.x = 2;
+construction.position.z = -5;
+construction.position.x = 2;
 
 // Scroll Animation
 
@@ -121,8 +123,8 @@ function moveCamera() {
   moon.rotation.y += 0.075;
   moon.rotation.z += 0.05;
 
-  jeff.rotation.y += 0.01;
-  jeff.rotation.z += 0.01;
+  construction.rotation.y += 0.01;
+  construction.rotation.z += 0.01;
 
   camera.position.z = t * -0.01;
   camera.position.x = t * -0.0002;
