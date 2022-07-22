@@ -3,7 +3,7 @@ import javascriptLogo from './javascript.svg'
 import { setupCounter } from './counter.js'
 import * as THREE from 'three';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
-import constructionPath from './construction.png'
+import constructionPath from './construction.jpeg'
 import moonPath from './moon.jpg'
 import normalPath from './normal.jpg'
 import spacePath from './space.jpg'
